@@ -7,6 +7,21 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
+import { SvgDefinitions } from "./components/Svg";
+
+// TODO: preload svg icons
+// import iconHref from "~/icon.svg"
+// export const links: LinksFunction = () => {
+//   return [
+//     // Preload svg sprite as a resource to avoid render blocking
+//     {
+//       rel: "preload",
+//       href: iconHref,
+//       as: "image",
+//       type: "image/svg+xml",
+//     },
+//   ]
+// }
 
 export default component$(() => {
   /**
@@ -25,6 +40,7 @@ export default component$(() => {
       </head>
       <body lang="en">
         <RouterOutlet />
+        <SvgDefinitions />
         <ServiceWorkerRegister />
       </body>
     </QwikCityProvider>
